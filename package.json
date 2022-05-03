@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "serverside for germinate",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "server":"nodemon index.js",
+    "techietom":"npm start --prefix techietom",
+    "dev":"concurrently \"npm start server\" \"npm run techietom \"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heruko-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix techietom && npm run build --prefix techietom"
+  },
+  "author": "germinate",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.1.0",
+    "cors": "^2.8.5",
+    "email-templates": "^2.7.1",
+    "express": "^4.18.0",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.7.3",
+    "nodemon": "^2.0.15"
+  }
+}
